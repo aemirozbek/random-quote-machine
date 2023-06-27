@@ -30,7 +30,7 @@ function App() {
   return (
     <div id="wrapper">
       <div id="quote-box">
-        <div id="text">With the realization of ones own potential and self-confidence in ones ability, one can build a better world.</div>
+        <div id="text">{quoteOnly}</div>
         <div id="author">-{author !== null && author}{author === null && "Unknown"}</div>
         <div>
           <button id="new-quote" onClick={fetchQuote}>
