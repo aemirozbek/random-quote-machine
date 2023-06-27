@@ -1,23 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
 
+
+let initialQuoteSwitch = true
 function App() {
+  const [quote, setQuote] = useState({});
+  let quoteOnly = quote.text;
+  let author = quote.author;
+  let tweetUrl = `https://twitter.com/intent/tweet?text="${encodeURIComponent(quoteOnly)}"${encodeURIComponent(" "+author)}`
+  
+
+  function fetchQuote() {
+    fetch("https://type.fit/api/quotes")
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        setQuote(data[Math.floor(Math.random() * data.length)]);
+      });
+  }
+    if(initialQuoteSwitch){
+      fetchQuote();
+      initialQuoteSwitch = false
+      quoteOnly = quote.text;
+      author = quote.author;
+    }
+  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div id="wrapper">
+      <div id="quote-box">
+        <div id="text">With the realization of ones own potential and self-confidence in ones ability, one can build a better world.</div>
+        <div id="author">-{author !== null && author}{author === null && "Unknown"}</div>
+        <div>
+          <button id="new-quote" onClick={fetchQuote}>
+            New Quote
+          </button>
+          <a id="tweet-quote" className="twitter-share-button" href={tweetUrl} target="_blank" text={quoteOnly}>Tweet this</a>
+        </div>
+
+      </div>
     </div>
   );
 }
