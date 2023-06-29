@@ -23,7 +23,7 @@ function App() {
     "rgb(208, 169, 92)", // Mustard Yellow
     "rgb(140, 119, 163)", // Lavender
   ];
-  const randomColor = `${mainColors[Math.floor(Math.random() * 12)]}`;
+  const randomColor = `${mainColors[Math.floor(Math.random() * mainColors.length)]}`;
   const [color, setColor] = useState(randomColor);
   const textColor = { color: color, transition: "2s ease" };
   const backgroundColor = { backgroundColor: color, transition: "1.5s ease" };
