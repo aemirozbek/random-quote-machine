@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# Random Quote Machine
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The Random Quote Machine is a web application built using React.js that displays random quotes fetched from an external API. The application allows users to generate a new random quote with the click of a button and share the quote on Twitter.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Fetches random quotes from the type.fit API.
+- Displays a random quote along with its author.
+- Provides a button to generate a new random quote.
+- Allows users to share the quote on Twitter using the "Tweet" button.
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+To run the Random Quote Machine locally, follow these steps:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Clone the repository or download the source code.
+1. Open a terminal and navigate to the project directory.
+1. Install the dependencies by running the command: `npm install`
+1. Start the development server with the command: `npm start`
+1. Open your web browser and visit http://localhost:3000 to see the application running.
 
-### `npm test`
+## Dependencies
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The Random Quote Machine project uses the following dependencies:
 
-### `npm run build`
+- React.js: A JavaScript library for building user interfaces.
+- Bootstrap: A popular CSS framework for styling web applications.
+- Font Awesome: A library of scalable vector icons.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Usage
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Upon opening the application, a random quote and its author will be displayed.
+1. To generate a new random quote, click the "New Quote" button.
+1. The quote and author will fade out and a new random quote will fade in.
+1. To share the quote on Twitter, click the Twitter icon button. This will open a new tab with a pre-filled tweet containing the quote and author.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Customization
 
-### `npm run eject`
+The application has a customizable feature that can be modified in the App.js file:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- mainColors: An array of colors used to generate random background and text colors for the quotes. Modify this array to add or remove colors as desired.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Acknowledgments
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The Random Quote Machine project was inspired by the FreeCodeCamp Random Quote Machine project. The quotes are fetched from the type.fit API.
